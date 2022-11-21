@@ -1,0 +1,70 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $main-font;
+  font-size: $main-font-size;
+  color: $main-text-color;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media screen and (min-width: 480px) {
+  }
+}
+
+.section {
+  padding-top: 94px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-align {
+  display: flex;
+  align-items: baseline;
+}
+
+.menu,
+.mob-menu,
+.contacts,
+.collection,
+.features__list,
+.team__list,
+.clients__list,
+.filter-list,
+.portfolio__projects-list {
+  list-style: none;
+}

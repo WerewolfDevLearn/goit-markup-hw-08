@@ -1,0 +1,57 @@
+.logo {
+  font-family: $logo-font;
+  font-size: $logo-font-mob-size;
+  line-height: calc(28 / 24);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  // padding-bottom: 25px;
+  // font-size: $logo-font-size;
+  // line-height: 1.19;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: $logo-font-size;
+    padding-bottom: 25px;
+  }
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+}
+
+.ftr__logo {
+  padding-bottom: 20px;
+}
+
+.logo--accent {
+  color: $accent-color;
+}
+
+.logo--black {
+  color: $color-black;
+}
+
+.logo--white {
+  color: $color-white;
+}
+
+.logo--margin {
+  margin-right: auto;
+  @media screen and(min-width: 480px) {
+    margin-right: 284px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+}

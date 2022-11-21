@@ -1,0 +1,110 @@
+.ftr {
+  background-color: $background-color-dark;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.contacts-container {
+  margin-right: 70px;
+}
+
+.company-adress {
+  font-style: normal;
+}
+
+.company-adress__item {
+  margin-bottom: 9px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.company-adress__link {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $footer-adress-text-color;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.company-adress__link--mod {
+  color: $color-white;
+}
+
+.socials {
+  margin-right: 93px;
+}
+
+.socials__heading,
+.subscribe-form__heading {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $color-white;
+  margin-bottom: 20px;
+}
+
+.subscribe-form__heading {
+  display: block;
+}
+
+.subscribe-form__btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: $accent-color;
+  font-family: inherit;
+  color: $color-white;
+  font-size: $secondary-font-size;
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border-color: transparent;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px $shadow-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 50px;
+  width: 200px;
+  &:hover,
+  &:focus {
+    background-color: $accent-button-color;
+  }
+}
+
+.subscribe-form__icon {
+  fill: currentColor;
+  margin-left: 10px;
+}
+
+.subscribe-form__input {
+  width: 358px;
+  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  padding-right: 15px;
+  margin-right: 12px;
+  font-weight: 400;
+  font-size: $secondary-font-size;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: $footer-adress-text-color;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  &:focus,
+  &:hover {
+    outline: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
