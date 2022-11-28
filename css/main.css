@@ -436,7 +436,7 @@ body {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -565,11 +565,6 @@ img {
 
 .logo--margin {
   margin-right: auto;
-}
-@media screen and (min-width: 480px) {
-  .logo--margin {
-    margin-right: 284px;
-  }
 }
 @media screen and (min-width: 768px) {
   .logo--margin {
@@ -813,10 +808,15 @@ img {
 .mob-menu-contacts__phone-link {
   color: #2196f3;
   font-weight: 500;
-  font-size: 34px;
   line-height: 1.1764705882;
   letter-spacing: 0.02em;
   text-decoration: none;
+  font-size: 30px;
+}
+@media screen and (min-width: 480) {
+  .mob-menu-contacts__phone-link {
+    font-size: 34px;
+  }
 }
 
 .mob-menu-contacts__email-link {
@@ -834,11 +834,10 @@ img {
   line-height: 1.2222222222;
   letter-spacing: 0.02em;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .mob-menu-soc__item {
-  padding-right: 10px;
-  padding-left: 10px;
   border-left: 1px solid rgba(33, 33, 33, 0.2);
 }
 .mob-menu-soc__item:first-child {
@@ -847,6 +846,8 @@ img {
 }
 
 .mob-menu-soc__link {
+  padding-right: 10px;
+  padding-left: 10px;
   color: #2196f3;
   text-decoration: none;
 }
@@ -892,31 +893,31 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero/hero-img-mob.jpg");
+  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-img.jpg");
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero--overlay {
-    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero/hero-img-mob-2x.jpg");
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-img-mob-2x.jpg");
   }
 }
 @media screen and (min-width: 768px) {
   .hero--overlay {
-    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero/hero-img-tablet.jpg");
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-img-tablet.jpg");
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero--overlay {
-    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero/hero-img-tablet-2x.jpg");
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-img-tablet-2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
   .hero--overlay {
-    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero/hero-img.jpg");
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-img.jpg");
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero--overlay {
-    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero/hero-img-2x.jpg");
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-img-2x.jpg");
   }
 }
 
@@ -995,7 +996,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .features__list {
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
   }
 }
 
@@ -1116,41 +1117,23 @@ img {
 .team__list {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .teammate {
   width: 100%;
-  margin-bottom: 30px;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: #fff;
 }
-.teammate:last-child {
-  margin-bottom: 0px;
-}
 @media screen and (min-width: 768px) {
   .teammate {
-    flex-basis: 354px;
-    margin-right: 30px;
-  }
-  .teammate:nth-child(2n) {
-    margin-right: 0px;
-  }
-  .teammate:nth-last-child(-n+2) {
-    margin-bottom: 0px;
+    flex-basis: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
   .teammate {
-    flex-basis: 270px;
-    margin-bottom: 0px;
-    margin-right: 30px;
-  }
-  .teammate:nth-child(2n) {
-    margin-right: 30px;
-  }
-  .teammate:last-child {
-    margin-right: 0px;
+    flex-basis: calc((100% - 90px) / 4);
   }
 }
 
@@ -1233,11 +1216,7 @@ img {
   line-height: 1.1785714286;
   text-align: center;
   letter-spacing: 0.03em;
-}
-@media screen and (min-width: 768px) {
-  .clients__heading {
-    margin-bottom: 30px;
-  }
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 1200px) {
   .clients__heading {
@@ -1641,7 +1620,7 @@ img {
 
 .modal {
   position: relative;
-  width: 450px;
+  max-width: 450px;
   height: 609px;
   padding: 40px;
   border-radius: 4px;
