@@ -10,7 +10,6 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/modern-normalize.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
     <title>WebStudio</title>
   </head>
@@ -20,7 +19,7 @@
         <a href="./index.html" class="logo header__logo logo--margin logo--black">
           <span class="logo--accent">Web</span>Studio
         </a>
-        <!-- <nav class="hdr__user-nav user-nav">
+        <nav class="hdr__user-nav user-nav">
           <ul class="user-nav__list menu">
             <li class="menu__item">
               <a href="./index.html" class="menu__link menu__link--current">Студія</a>
@@ -47,51 +46,57 @@
             </a>
           </li>
         </ul>
-      </div> -->
 
-        <button type="button" class="mob-menu-button-open" aria-label="відкрити меню" data-mob-menu-open>
+        <button
+          type="button"
+          class="mob-menu-button-open"
+          aria-label="відкрити меню"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-mob-menu-open
+        >
           <svg class="mob-menu_button-close-icon" width="24" height="16">
             <use href="./images/svg/icons.svg#icon-menu_open"></use>
           </svg>
         </button>
-        <div class="mob-menu-container">
-          <nav class="hdr__user-nav user-nav">
-            <ul class="user-nav__list mob-menu">
-              <li class="mob-menu__item">
-                <a href="./index.html" class="mob-menu__link mob-menu__link--current">Студія</a>
-              </li>
-              <li class="mob-menu__item"><a href="./portfolio.html" class="mob-menu__link">Портфоліо</a></li>
-              <li class="mob-menu__item"><a href="#" class="mob-menu__link">Контакти</a></li>
-            </ul>
-          </nav>
-          <ul class="hdr__contacts-list mob-menu-contacts">
-            <li class="mob-menu-contacts__item">
-              <a href="tel:+380961111111" class="mob-menu-contacts__phone-link"> +38 096 111 11 11 </a>
+      </div>
+      <div class="mob-menu-container" data-menu>
+        <nav class="hdr__user-nav user-nav-mob">
+          <ul class="user-nav-mob__list mob-menu">
+            <li class="mob-menu__item">
+              <a href="./index.html" class="mob-menu__link mob-menu__link--current">Студія</a>
             </li>
-            <li class="mob-menu-contacts__item">
-              <a href="mailto:info@devstudio.com" class="mob-menu-contacts__email-link"> info@devstudio.com </a>
-            </li>
+            <li class="mob-menu__item"><a href="./portfolio.html" class="mob-menu__link">Портфоліо</a></li>
+            <li class="mob-menu__item"><a href="#" class="mob-menu__link">Контакти</a></li>
           </ul>
-          <ul class="mob-menu-soc">
-            <li class="mob-menu-soc__item">
-              <a class="mob-menu-soc__link" href="https://www.instagram.com">Instagram</a>
-            </li>
-            <li class="mob-menu-soc__item">
-              <a class="mob-menu-soc__link" href="https://twitter.com">Twitter</a>
-            </li>
-            <li class="mob-menu-soc__item">
-              <a class="mob-menu-soc__link" href="https://www.facebook.com">Facebook</a>
-            </li>
-            <li class="mob-menu-soc__item">
-              <a class="mob-menu-soc__link" href="https://ua.linkedin.com">LinkedIn</a>
-            </li>
-          </ul>
-          <button type="button" class="mob-menu-button-close" aria-label="закрити меню" data-mob-menu-close>
-            <svg class="mob-menu-button-close-icon" width="40" height="40">
-              <use href="./images/svg/icons.svg#icon-menu_close"></use>
-            </svg>
-          </button>
-        </div>
+        </nav>
+        <ul class="hdr__contacts-list mob-menu-contacts">
+          <li class="mob-menu-contacts__item">
+            <a href="tel:+380961111111" class="mob-menu-contacts__phone-link"> +38 096 111 11 11 </a>
+          </li>
+          <li class="mob-menu-contacts__item">
+            <a href="mailto:info@devstudio.com" class="mob-menu-contacts__email-link"> info@devstudio.com </a>
+          </li>
+        </ul>
+        <ul class="mob-menu-soc">
+          <li class="mob-menu-soc__item">
+            <a class="mob-menu-soc__link" href="https://www.instagram.com">Instagram</a>
+          </li>
+          <li class="mob-menu-soc__item">
+            <a class="mob-menu-soc__link" href="https://twitter.com">Twitter</a>
+          </li>
+          <li class="mob-menu-soc__item">
+            <a class="mob-menu-soc__link" href="https://www.facebook.com">Facebook</a>
+          </li>
+          <li class="mob-menu-soc__item">
+            <a class="mob-menu-soc__link" href="https://ua.linkedin.com">LinkedIn</a>
+          </li>
+        </ul>
+        <button type="button" class="mob-menu-button-close" aria-label="закрити меню" data-mob-menu-close>
+          <svg class="mob-menu-button-close-icon" width="40" height="40">
+            <use href="./images/svg/icons.svg#icon-menu_close"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -101,7 +106,7 @@
           <button type="button" class="hero__button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
-      <!-- <section class="features section">
+      <section class="features section">
         <div class="features__container container">
           <h2 class="features__header visually-hidden">Наші особливості</h2>
           <ul class="features__list">
@@ -156,7 +161,7 @@
           <ul class="engagement_collection collection">
             <li class="collection__item">
               <img
-                src="./images/img_1.jpg"
+                srcset="./images/img_1.jpg 1200w, ./images/img_1@2x.jpg 2400w"
                 alt="programer working his desk office"
                 width="370"
                 class="collection__image"
@@ -165,7 +170,7 @@
             </li>
             <li class="collection__item">
               <img
-                src="./images/img_2.jpg"
+                srcset="./images/img_2.jpg 1200w, ./images/img_2@2x.jpg 2400w"
                 alt="web ui designers are developing application"
                 width="370"
                 class="collection__image"
@@ -174,7 +179,7 @@
             </li>
             <li class="collection__item">
               <img
-                src="./images/img_3.jpg"
+                srcset="./images/img_3.jpg 1200w, ./images/img_3@2x.jpg 2400w"
                 alt="web design with working graphic tablet"
                 width="370"
                 class="collection__image"
@@ -189,35 +194,59 @@
           <h2 class="team__heading">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item teammate">
-              <img src="./images/team/img_team_1.jpg" alt="Product Designer" width="270" class="teammate__photo" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desktop/img_team_1_desktop_@1x.jpg 1200w,
+                    ./images/team/desktop/img_team_1_desktop_@2x.jpg 2400w
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/img_team_1_tablet_@1x.jpg  768w,
+                    ./images/team/tablet/img_team_1_tablet_@2x.jpg 1536w
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="./images/team/mob/img_team_1_mob_@1x.jpg 480w, ./images/team/mob/img_team_1_mob_@2x.jpg 960w"
+                  media="(min-width: 480px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/team/mob/img_team_1_mob_@1x.jpg" alt="Product Designer" class="teammate__photo" />
+              </picture>
               <div class="teammate__discription">
                 <h3 class="teammate__name">Ігор Дем'яненко</h3>
                 <p lang="en" class="teammate__profession">Product Designer</p>
                 <ul class="teammate__social-networks social-networks">
                   <li class="social-network">
                     <a class="social-network__link" href="#">
-                      <svg class="social-network__icon" width="44" height="44">
+                      <svg class="social-network__icon">
                         <use href="./images/svg/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-network">
                     <a class="social-network__link" href="#">
-                      <svg class="social-network__icon" width="44" height="44">
+                      <svg class="social-network__icon">
                         <use href="./images/svg/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-network">
                     <a class="social-network__link" href="#">
-                      <svg class="social-network__icon" width="44" height="44">
+                      <svg class="social-network__icon">
                         <use href="./images/svg/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-network">
                     <a class="social-network__link" href="#">
-                      <svg class="social-network__icon" width="44" height="44">
+                      <svg class="social-network__icon">
                         <use href="./images/svg/icons.svg#icon-linkidin"></use>
                       </svg>
                     </a>
@@ -226,7 +255,32 @@
               </div>
             </li>
             <li class="team__item teammate">
-              <img src="./images/team/img_team_2.jpg" alt="Frontend Developer" width="270" class="teammate__photo" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desktop/img_team_2_desktop_@1x.jpg 1200w,
+                    ./images/team/desktop/img_team_2_desktop_@2x.jpg 2400w
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/img_team_2_tablet_@1x.jpg  768w,
+                    ./images/team/tablet/img_team_2_tablet_@2x.jpg 1536w
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="./images/team/mob/img_team_2_mob_@1x.jpg 480w, ./images/team/mob/img_team_2_mob_@2x.jpg 960w"
+                  media="(min-width: 480px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/team/mob/img_team_2_mob_@1x.jpg" alt="Frontend Developer" class="teammate__photo" />
+              </picture>
+
               <div class="teammate__discription">
                 <h3 class="teammate__name">Ольга Рєпіна</h3>
                 <p lang="en" class="teammate__profession">Frontend Developer</p>
@@ -263,7 +317,32 @@
               </div>
             </li>
             <li class="team__item teammate">
-              <img src="./images/team/img_team_3.jpg" alt="Marketing" width="270" class="teammate__photo" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desktop/img_team_3_desktop_@1x.jpg 1200w,
+                    ./images/team/desktop/img_team_3_desktop_@2x.jpg 2400w
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/img_team_3_tablet_@1x.jpg  768w,
+                    ./images/team/tablet/img_team_3_tablet_@2x.jpg 1536w
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="./images/team/mob/img_team_3_mob_@1x.jpg 480w, ./images/team/mob/img_team_3_mob_@2x.jpg 960w"
+                  media="(min-width: 480px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/team/mob/img_team_3_mob_@1x.jpg" alt="Marketing" class="teammate__photo" />
+              </picture>
+
               <div class="teammate__discription">
                 <h3 class="teammate__name">Микола Тарасов</h3>
                 <p lang="en" class="teammate__profession">Marketing</p>
@@ -301,7 +380,35 @@
             </li>
             <li class="team__item teammate">
               <div class="teammate">
-                <img src="./images/team/img_team_4.jpg" alt="UI Designer" width="270" class="teammate__photo" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/desktop/img_team_4_desktop_@1x.jpg 1200w,
+                      ./images/team/desktop/img_team_4_desktop_@2x.jpg 2400w
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/tablet/img_team_4_tablet_@1x.jpg  768w,
+                      ./images/team/tablet/img_team_4_tablet_@2x.jpg 1536w
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/team/mob/img_team_4_mob_@1x.jpg 480w,
+                      ./images/team/mob/img_team_4_mob_@2x.jpg 960w
+                    "
+                    media="(min-width: 480px)"
+                    type="image/jpeg"
+                  />
+                  <img src="./images/team/mob/img_team_4_mob_@1x.jpg" alt="UI Designer" class="teammate__photo" />
+                </picture>
+
                 <div class="teammate__discription">
                   <h3 class="teammate__name">Михайло Єрмаков</h3>
                   <p lang="en" class="teammate__profession">UI Designer</p>
@@ -401,7 +508,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
     <footer class="ftr">
       <div class="ftr__container container flex-align">
@@ -536,6 +643,14 @@
         </form>
       </div>
     </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

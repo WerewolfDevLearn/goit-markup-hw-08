@@ -5,7 +5,17 @@
 }
 
 .contacts-container {
-  margin-right: 70px;
+  text-align: center;
+  margin-bottom: 60px;
+  @media screen and(min-width:768px) {
+    margin-right: 165px;
+    margin-left: 61px;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+    margin-left: 0px;
+    margin-right: 70px;
+  }
 }
 
 .company-adress {
@@ -36,7 +46,27 @@
 }
 
 .socials {
-  margin-right: 93px;
+  margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+    margin-bottom: 0px;
+  }
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  @media screen and(min-width:768px) {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and(min-width:1200px) {
+    width: auto;
+    display: block;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 
 .socials__heading,
@@ -48,6 +78,10 @@
   text-transform: uppercase;
   color: $color-white;
   margin-bottom: 20px;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .subscribe-form__heading {
@@ -73,6 +107,8 @@
   padding-right: 28px;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
   height: 50px;
   width: 200px;
   &:hover,
@@ -87,7 +123,10 @@
 }
 
 .subscribe-form__input {
-  width: 358px;
+  max-width: 480px;
+  width: 100%;
+  margin-bottom: 20px;
+
   height: 50px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -106,5 +145,9 @@
   &:focus,
   &:hover {
     outline: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-bottom: 0px;
   }
 }

@@ -1,13 +1,34 @@
 .filter {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    margin-bottom: 50px;
+  }
 }
 
 .filter__item {
   margin-right: 8px;
+  margin-bottom: 15px;
   &:last-child {
     margin-right: 0px;
+  }
+  &:nth-last-child(-n + 2) {
+    margin-bottom: 0px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    &:nth-last-child(n) {
+      margin-bottom: 0px;
+    }
   }
 }
 
