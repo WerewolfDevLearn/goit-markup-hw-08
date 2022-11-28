@@ -37,10 +37,13 @@
   text-decoration: none;
   color: $main-text-color;
   &:hover,
-  &:focus,
-  &:active {
+  &:focus {
     color: $accent-color;
   }
+}
+
+.mob-menu__link--current {
+  color: $accent-color;
 }
 
 .mob-menu-contacts {

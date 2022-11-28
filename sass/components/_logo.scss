@@ -8,10 +8,6 @@
   display: block;
   padding-top: 16px;
   padding-bottom: 16px;
-  // padding-bottom: 25px;
-  // font-size: $logo-font-size;
-  // line-height: 1.19;
-
   @media screen and (min-width: 768px) {
     padding-top: 26px;
     padding-bottom: 26px;
@@ -19,6 +15,7 @@
   @media screen and (min-width: 1200px) {
     font-size: $logo-font-size;
     padding-bottom: 25px;
+    padding-top: 25px;
     line-height: 1.19;
   }
   &:focus,
@@ -28,7 +25,9 @@
 }
 
 .ftr__logo {
-  padding-bottom: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 20px;
 }
 
 .logo--accent {

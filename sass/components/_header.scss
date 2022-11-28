@@ -118,6 +118,28 @@
   fill: currentColor;
 }
 
+.smartphone-icon {
+  @media screen and (min-width: 768px) {
+    width: 10px;
+    height: 14px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.email-icon {
+  @media screen and (min-width: 768px) {
+    width: 14px;
+    height: 10px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .mob-menu-button-open {
   border: 0px solid transparent;
   background-color: transparent;
